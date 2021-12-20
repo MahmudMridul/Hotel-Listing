@@ -30,7 +30,7 @@ namespace HotelListing
         {
             services.AddDbContext<HotelListingContext>
                 (
-                    ops => ops.UseSqlServer("connection")
+                    ops => ops.UseSqlServer(Configuration.GetConnectionString("connection"))
                 );
 
             services.AddControllers();
