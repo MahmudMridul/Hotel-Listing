@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelListing.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace HotelListing.DTOs
     public class CountryDTO : CreateCountryDTO 
     {
         public int Id { get; set; }
+        public virtual IList<HotelDTO> Hotels { get; set; }
     }
 
 }
