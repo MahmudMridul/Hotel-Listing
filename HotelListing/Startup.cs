@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelListing.Models;
+using HotelListing.Configurations;
 
 namespace HotelListing
 {
@@ -50,6 +51,8 @@ namespace HotelListing
                     );
                 }
             );
+
+            services.AddAutoMapper(typeof(MapperInitializer));
 
             services.AddSwaggerGen(c =>
             {
